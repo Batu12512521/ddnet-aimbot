@@ -6,7 +6,7 @@ import sys
 def check_name(kind, qualifiers, typ, name):
 	if kind == "variable":
 		return check_variable_name(qualifiers, typ, name)
-	if kind in "class struct".split():
+	if kind in ["class", "struct"]:
 		if name[0] not in "CI":
 			return "should start with 'C' (or 'I' for interfaces)"
 		if len(name) < 2:
@@ -20,17 +20,7 @@ def check_name(kind, qualifiers, typ, name):
 
 
 ALLOW = set(
-	"""
-	dx dy
-	fx fy
-	mx my
-	ix iy
-	px py
-	sx sy
-	wx wy
-	x0 x1
-	y0 y1
-""".split()
+	["dx", "dy", "fx", "fy", "mx", "my", "ix", "iy", "px", "py", "sx", "sy", "wx", "wy", "x0", "x1", "y0", "y1"]
 )
 
 

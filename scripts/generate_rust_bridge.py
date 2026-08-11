@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
+import argparse
 import os
 import subprocess
 import sys
-import argparse
 
 os.chdir(os.path.dirname(__file__) + "/..")
 

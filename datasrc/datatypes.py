@@ -585,7 +585,7 @@ class NetArray(NetVariable):
 
 	def emit_dump(self, offset):
 		result = []
-		for i in range(0, self.size):
+		for i in range(self.size):
 			result += NetVariable(self.var).emit_dump(offset + i)
 			result += [f'dbg_msg("snapshot", "%s\\t{self.base_name}[{int(i)}]=%d", aRawData, pObj->{self.base_name}[{int(i)}]);']
 		return result
@@ -599,7 +599,7 @@ class NetTwIntString(NetArray):
 
 	def emit_dump(self, offset):
 		result = []
-		for i in range(0, self.size):
+		for i in range(self.size):
 			result += [f"aInts[0] = pObj->{self.base_name}[{int(i)}];"]
 			result += ["IntsToStr(aInts, std::size(aInts), aStr, std::size(aStr));"]
 			result += NetVariable(self.var).emit_dump(offset + i)

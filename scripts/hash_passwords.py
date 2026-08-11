@@ -1,10 +1,10 @@
 import argparse
-import tempfile
 import binascii
 import hashlib
 import os
 import re
 import sys
+import tempfile
 
 AUTH_ADD_REGEX = re.compile(r'^\s*auth_add\s+(?P<username>"[^"]*"|[^"\s]+)\s+(?P<level>"[^"]*"|[^"\s]+)\s+(?P<password>"[^"]*"|[^"\s]+)\s*$')
 AUTH_ADD_PRESENT_REGEX = re.compile(r"(^|\W)auth_add($|\W)")

@@ -1,11 +1,4 @@
 #!/usr/bin/env python3
-from collections import namedtuple
-from queue import Queue
-from threading import Thread
-from time import time
-from urllib import request
-from urllib.request import Request, urlopen
-from uuid import uuid4, UUID
 import io
 import json
 import os
@@ -16,6 +9,13 @@ import subprocess
 import sys
 import tempfile
 import traceback
+from collections import namedtuple
+from queue import Queue
+from threading import Thread
+from time import time
+from urllib import request
+from urllib.request import Request, urlopen
+from uuid import UUID, uuid4
 
 
 def urlopen_anystatus(url):
@@ -812,7 +812,7 @@ def smoke_test(test_env):
 	client2.wait_for_exit()
 	server.wait_for_exit()
 
-	if not all(any(word in line for line in client1.full_stdout) for word in "cmdlist pause rank points".split()):
+	if not all(any(word in line for line in client1.full_stdout) for word in ["cmdlist", "pause", "rank", "points"]):
 		raise AssertionError("did not find output of /cmdlist command")
 	if not any("hello from admin" in line for line in server.full_stdout):
 		raise AssertionError("admin message not found in server output")
