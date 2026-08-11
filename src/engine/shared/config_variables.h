@@ -787,3 +787,6 @@ MACRO_CONFIG_INT(ClVideoRecorderFPS, cl_video_recorder_fps, 60, 1, 1000, CFGFLAG
 /*
  * Add config variables for mods below this comment to avoid merge conflicts.
  */
+MACRO_CONFIG_INT(ClAimbotEnabled, cl_aimbot_enabled, 0, 0, 1, CFG_SAVE, "Enable Aimbot")
+MACRO_CONFIG_INT(ClAimbotFov, cl_aimbot_fov, 20, 1, 360, CFG_SAVE, "Aimbot FOV")
+MACRO_CONFIG_INT(ClAimbotDrawLines, cl_aimbot_draw_lines, 0, 0, 1, CFG_SAVE, "Draw Aimbot Lines")
