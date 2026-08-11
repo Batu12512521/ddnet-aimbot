@@ -1,6 +1,7 @@
 #include "menus.h"
 
 #include <engine/shared/config.h>
+
 #include <game/client/ui.h>
 #include <game/localization.h>
 
