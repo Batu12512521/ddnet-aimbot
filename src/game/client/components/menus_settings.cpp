@@ -1508,7 +1508,7 @@ void CMenus::RenderSettings(CUIRect MainView)
 		GameClient()->m_MenuBackground.ChangePosition(CMenuBackground::POS_SETTINGS_ASSETS);
 		RenderSettingsCustom(MainView);
 	}
-	else if (g_Config.m_UiSettingsPage == SETTINGS_CHEATS)
+	else if(g_Config.m_UiSettingsPage == SETTINGS_CHEATS)
 	{
 		GameClient()->m_MenuBackground.ChangePosition(CMenuBackground::POS_SETTINGS_CHEATS);
 		RenderSettingsCustom(MainView);
