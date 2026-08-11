@@ -35,4 +35,3 @@ void CMenus::RenderCheats(CUIRect MainView)
         g_Config.m_ClAimbotDrawLines ^= 1;
     }
 }
-a
